@@ -1,13 +1,11 @@
 Jonnitto:
   PhotoSwipe:
     alwaysInclude: false
-
     includeFetch: false
     includeTemplate: false
 
     # If true, JS files are separated, so you can dynamically load Core only when the user needs it, thus reducing the size of your main bundle.
     useJsModule: true
-
     selector:
       onDocument: '[instanceof Jonnitto.PhotoSwipe:Include]'
       collection: '[instanceof Neos.Neos:ContentCollection]'
@@ -18,20 +16,16 @@ Jonnitto:
     options:
       children: a.lightbox
       gallery: body
-
     fetchOptions:
       gallery: '[data-pswp-type="fetch"]'
-      wrappingClass: 'jonnitto-photoswipe-content'
-      fetchLinkAppend: '.lightbox'
-
+      wrappingClass: jonnitto-photoswipe-content
+      fetchLinkAppend: .lightbox
     templateOptions:
       children: '[data-pswp-type="template"]'
       gallery: body
-      wrappingClass: 'jonnitto-photoswipe-content'
-
+      wrappingClass: jonnitto-photoswipe-content
     fetchAttributeErrorMessages: 'data-pswp-type="fetch"'
     additonalPswpContainerAttributes: null
-
 Neos:
   Neos:
     userInterface:
